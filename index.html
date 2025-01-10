@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología en Desarrollo de Software</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <style>
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="bg-dark text-white text-center py-5" style="background-image: linear-gradient(to bottom, rgba(128, 0, 128, 0.5), rgba(128, 0, 128, 0.5)), url('../img/desarrollo-de-software.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container">
+            <h1 class="display-4">Tecnología Superior en Desarrollo de Software</h1>
+            <p class="lead">¡Construye tu futuro!</p>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="container">
+
+            <!-- Información sobre la carrera -->
+            <section class="mb-4">
+                <div class="card mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Objetivo de la carrera</h2>
+                                <p class="card-text" style="text-align: justify;">
+                                    La carrera Tecnología en Desarrollo de Software forma profesionales capaces de gestionar actividades de trabajo relacionadas a procesos de diseño y desarrollo de software. Automatización de procesos en áreas de soporte de infraestructura tecnológica, soporte de redes de datos, gestión de proyectos tecnológicos. Con destrezas para operar sistemas informáticos basados en los fundamentos de diseño de estructuras y plataformas informáticas con estándares internacionales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/img.jpg" alt="Estudiantes desarrollando software" class="img-fluid rounded-end">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- Información sobre la carrera -->
+            <section class="mb-4">
+                <h2>Sobre la Carrera</h2>
+                <p>
+                    La carrera de Tecnología en Desarrollo de Software consta de 4 semestres, donde aprenderás habilidades como:
+                </p>
+                <ul>
+                    <li>Diseño y manejo de bases de datos.</li>
+                    <li>Programación web y frameworks modernos.</li>
+                    <li>Aplicación de normativas para documentación de proyectos.</li>
+                    <li>Prácticas preprofesionales con proyectos reales.</li>
+                </ul>
+            </section>
+
+            <!-- Formulario de pre-matrícula -->
+            <section>
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Formulario de Pre-Matrícula</h2>
+                        <form id="preMatricula" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo" name="correo" required>
+                                <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Número de Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+                                <div class="invalid-feedback">Por favor, ingresa un número de 10 dígitos.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje o Consulta</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                                <div class="invalid-feedback">Por favor, ingresa un mensaje.</div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Tecnología en Desarrollo de Software. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Validación del formulario
+        (() => {
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+</body>
+</html>
